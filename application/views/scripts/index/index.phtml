@@ -1,0 +1,26 @@
+<?
+/* @var $appService Tasked_Model_AppService */
+$appService = $this->appService;
+/* @var $appWorkspace Tasked_Model_AppWorkspace */
+/* @var $appCollection Tasked_Model_AppCollection */
+?>
+<?= '<?xml version="1.0" encoding="utf-8"?>' . PHP_EOL ?>
+<app:service xmlns:app="http://www.w3.org/2007/app"
+             xmlns:atom="http://www.w3.org/2005/Atom">
+<? foreach ($appService->getAppWorkspaces() as $appWorkspace): ?>
+  <app:workspace>
+    <atom:title><?= $this->escape($appWorkspace->getAtomTitle()) ?></atom:title>
+<?  foreach ($appWorkspace->getAppCollections() as $appCollection): ?>
+    <app:collection href="<?= $this->url(
+    array (
+        'action'        => 'index',
+        'controller'    => $appCollection->getControllerName(),
+        'module'        => $appWorkspace->getModuleName(),
+    )
+) ?>">
+        <atom:title><?= $this->escape($appCollection->getAtomTitle()) ?></atom:title>
+    </app:collection>
+<?  endforeach; ?>
+  </app:workspace>
+<? endforeach; ?>
+</app:service>
