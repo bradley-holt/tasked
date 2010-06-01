@@ -29,17 +29,17 @@ class Tasked_Plugin_AppWorkspace extends Zend_Controller_Plugin_Abstract
         /* @var $appService Tasked_Model_AppService */
         $appService = $request->getParam('appService');
         $appWorkspace = new Tasked_Model_AppWorkspace();
-        $vehicleResultCollection = new Tasked_Model_AppCollection();
-        $vehicleResultCollection
-            ->setControllerName('vehicle-result')
-            ->setAtomTitle('Vehicle Results')
+        $taskCollection = new Tasked_Model_AppCollection();
+        $taskCollection
+            ->setControllerName('task')
+            ->setAtomTitle('Tasks')
         ;
         $appWorkspace
             ->setModuleName('default')
             ->setAtomTitle('Default')
             ->setAppCollections(
                 array (
-                    $vehicleResultCollection,
+                    $taskCollection,
                 )
             )
         ;
