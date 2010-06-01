@@ -1,0 +1,5 @@
+Tasked
+======
+
+Tasked is a web application for managing tasks and resources. It is built using
+Zend Framework and its API is based on the Atom Publishing Protocol.
