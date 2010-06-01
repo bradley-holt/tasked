@@ -9,8 +9,8 @@
  */
 
 /**
- * Task Test
- * 
+ * Resource Test
+ *
  * @group       Tasked
  * @group       Model
  * @group       Resource
