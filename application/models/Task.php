@@ -44,34 +44,34 @@ class Tasked_Model_Task
     private $_resource;
 
     /**
-     * @var Zend_Date
+     * @var Tasked_Model_TaskNode
      */
-    private $_targetStart;
+    private $_targetStartNode;
 
     /**
-     * @var Zend_Date
+     * @var Tasked_Model_TaskNode
      */
-    private $_targetFinish;
+    private $_targetFinishNode;
 
     /**
-     * @var Zend_Date
+     * @var Tasked_Model_TaskNode
      */
-    private $_scheduledStart;
+    private $_scheduledStartNode;
 
     /**
-     * @var Zend_Date
+     * @var Tasked_Model_TaskNode
      */
-    private $_scheduledFinish;
+    private $_scheduledFinishNode;
 
     /**
-     * @var Zend_Date
+     * @var Tasked_Model_TaskNode
      */
-    private $_actualStart;
+    private $_actualStartNode;
 
     /**
-     * @var Zend_Date
+     * @var Tasked_Model_TaskNode
      */
-    private $_actualFinish;
+    private $_actualFinishNode;
 
     /**
      * Get UUID
@@ -196,152 +196,134 @@ class Tasked_Model_Task
     }
 
     /**
-     * Get Target Start
+     * Get Target Start Node
      *
-     * @return Zend_Date
+     * @return Tasked_Model_TaskNode
      */
-    public function getTargetStart()
+    public function getTargetStartNode()
     {
-        if (null === $this->_targetStart) {
-            return null;
-        }
-        return clone $this->_targetStart;
+        return $this->_targetStartNode;
     }
 
     /**
-     * Set Target Start
+     * Set Target Start Node
      *
-     * @param Zend_Date $value
+     * @param Tasked_Model_TaskNode $value
      * @return Tasker_Model_Task   Provide a fluent interface
      */
-    public function setTargetStart(Zend_Date $value = null)
+    public function setTargetStartNode(Tasked_Model_TaskNode $value = null)
     {
-        $this->_targetStart = $value;
+        $this->_targetStartNode = $value;
         return $this;
     }
 
     /**
-     * Get Target Finish
+     * Get Target Finish Node
      *
-     * @return Zend_Date
+     * @return Tasked_Model_TaskNode
      */
-    public function getTargetFinish()
+    public function getTargetFinishNode()
     {
-        if (null === $this->_targetFinish) {
-            return null;
-        }
-        return clone $this->_targetFinish;
+        return $this->_targetFinishNode;
     }
 
     /**
-     * Set Target Finish
+     * Set Target Finish Node
      *
-     * @param Zend_Date $value
+     * @param Tasked_Model_TaskNode $value
      * @return Tasker_Model_Task   Provide a fluent interface
      */
-    public function setTargetFinish(Zend_Date $value = null)
+    public function setTargetFinishNode(Tasked_Model_TaskNode $value = null)
     {
-        $this->_targetFinish = $value;
+        $this->_targetFinishNode = $value;
         return $this;
     }
 
     /**
-     * Get Scheduled Start
+     * Get Scheduled Start Node
      *
-     * @return Zend_Date
+     * @return Tasked_Model_TaskNode
      */
-    public function getScheduledStart()
+    public function getScheduledStartNode()
     {
-        if (null === $this->_scheduledStart) {
-            return null;
-        }
-        return clone $this->_scheduledStart;
+        return $this->_scheduledStartNode;
     }
 
     /**
-     * Set Scheduled Start
+     * Set Scheduled Start Node
      *
-     * @param Zend_Date $value
+     * @param Tasked_Model_TaskNode $value
      * @return Tasker_Model_Task   Provide a fluent interface
      */
-    public function setScheduledStart(Zend_Date $value = null)
+    public function setScheduledStartNode(Tasked_Model_TaskNode $value = null)
     {
-        $this->_scheduledStart = $value;
+        $this->_scheduledStartNode = $value;
         return $this;
     }
 
     /**
-     * Get Scheduled Finish
+     * Get Scheduled Finish Node
      *
-     * @return Zend_Date
+     * @return Tasked_Model_TaskNode
      */
-    public function getScheduledFinish()
+    public function getScheduledFinishNode()
     {
-        if (null === $this->_scheduledFinish) {
-            return null;
-        }
-        return clone $this->_scheduledFinish;
+        return $this->_scheduledFinishNode;
     }
 
     /**
-     * Set Scheduled Finish
+     * Set Scheduled Finish Node
      *
-     * @param Zend_Date $value
+     * @param Tasked_Model_TaskNode $value
      * @return Tasker_Model_Task   Provide a fluent interface
      */
-    public function setScheduledFinish(Zend_Date $value = null)
+    public function setScheduledFinishNode(Tasked_Model_TaskNode $value = null)
     {
-        $this->_scheduledFinish = $value;
+        $this->_scheduledFinishNode = $value;
         return $this;
     }
 
     /**
-     * Get Actual Start
+     * Get Actual Start Node
      *
-     * @return Zend_Date
+     * @return Tasked_Model_TaskNode
      */
-    public function getActualStart()
+    public function getActualStartNode()
     {
-        if (null === $this->_actualStart) {
-            return null;
-        }
-        return clone $this->_actualStart;
+        return $this->_actualStartNode;
     }
 
     /**
-     * Set Actual Start
+     * Set Actual Start Node
      *
-     * @param Zend_Date $value
+     * @param Tasked_Model_TaskNode $value
      * @return Tasker_Model_Task   Provide a fluent interface
      */
-    public function setActualStart(Zend_Date $value = null)
+    public function setActualStartNode(Tasked_Model_TaskNode $value = null)
     {
-        $this->_actualStart = $value;
+        $this->_actualStartNode = $value;
         return $this;
     }
 
     /**
-     * Get Actual Finish
+     * Get Actual Finish Node
      *
-     * @return Zend_Date
+     * @return Tasked_Model_TaskNode
      */
-    public function getActualFinish()
+    public function getActualFinishNode()
     {
-        if (null === $this->_actualFinish) {
-            return null;
-        }
-        return clone $this->_actualFinish;
+        return $this->_actualFinishNode;
     }
 
     /**
-     * Set Actual Finish
+     * Set Actual Finish Node
      *
-     * @param Zend_Date $value
+     * @param Tasked_Model_TaskNode $value
      * @return Tasker_Model_Task   Provide a fluent interface
      */
-    public function setActualFinish(Zend_Date $value = null)
+    public function setActualFinishNode(Tasked_Model_TaskNode $value = null)
     {
-        $this->_actualFinish = $value;
+        $this->_actualFinishNode = $value;
         return $this;
     }
 }
