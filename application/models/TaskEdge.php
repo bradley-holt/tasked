@@ -33,7 +33,7 @@ class Tasked_Model_TaskEdge
      *
      * @param Tasked_Model_TaskNode $taskNodeA
      * @param Tasked_Model_TaskNode $taskNodeB
-     * @return void
+     * @return Tasked_Model_TaskEdge
      */
     public function __construct(
         Tasked_Model_TaskNode $taskNodeA,

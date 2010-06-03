@@ -27,7 +27,7 @@ class Tasked_Model_TaskNode
      * Construct
      *
      * @param Zend_Date $date
-     * @return void
+     * @return Tasked_Model_TaskNode
      */
     public function __construct(Zend_Date $date = null)
     {
