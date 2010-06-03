@@ -21,46 +21,46 @@ class Tasked_Model_TaskEdge
     /**
      * @var Tasked_Model_TaskNode
      */
-    private $_taskNodeA;
+    private $_startNode;
 
     /**
      * @var Tasked_Model_TaskNode
      */
-    private $_taskNodeB;
+    private $_finishNode;
 
     /**
      * Construct
      *
-     * @param Tasked_Model_TaskNode $taskNodeA
-     * @param Tasked_Model_TaskNode $taskNodeB
+     * @param Tasked_Model_TaskNode $startNode
+     * @param Tasked_Model_TaskNode $finishNode
      * @return Tasked_Model_TaskEdge
      */
     public function __construct(
-        Tasked_Model_TaskNode $taskNodeA,
-        Tasked_Model_TaskNode $taskNodeB
+        Tasked_Model_TaskNode $startNode,
+        Tasked_Model_TaskNode $finishNode
     )
     {
-        $this->_taskNodeA = $taskNodeA;
-        $this->_taskNodeB = $taskNodeB;
+        $this->_startNode = $startNode;
+        $this->_finishNode = $finishNode;
     }
 
     /**
-     * Get Task Node A
+     * Get Start Node
      *
      * @return Tasked_Model_TaskNode
      */
-    public function getTaskNodeA()
+    public function getStartNode()
     {
-        return $this->_taskNodeA;
+        return $this->_startNode;
     }
 
     /**
-     * Get Task Node B
+     * Get Finish Node
      *
      * @return Tasked_Model_TaskNode
      */
-    public function getTaskNodeB()
+    public function getFinishNode()
     {
-        return $this->_taskNodeB;
+        return $this->_finishNode;
     }
 }

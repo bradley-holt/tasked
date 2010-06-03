@@ -34,23 +34,23 @@ class Tasked_Model_TaskEdgeTest extends PHPUnit_Framework_TestCase
 
     public function testSetAndGetTaskNodeA()
     {
-        $taskNodeA = new Tasked_Model_TaskNode();
-        $taskNodeB = new Tasked_Model_TaskNode();
-        $taskEdge = new Tasked_Model_TaskEdge($taskNodeA, $taskNodeB);
+        $startNode = new Tasked_Model_TaskNode();
+        $finishNode = new Tasked_Model_TaskNode();
+        $taskEdge = new Tasked_Model_TaskEdge($startNode, $finishNode);
         $this->assertSame(
-            $taskNodeA,
-            $taskEdge->getTaskNodeA()
+            $startNode,
+            $taskEdge->getStartNode()
         );
     }
 
     public function testSetAndGetTaskNodeB()
     {
-        $taskNodeA = new Tasked_Model_TaskNode();
-        $taskNodeB = new Tasked_Model_TaskNode();
-        $taskEdgeRelation = new Tasked_Model_TaskEdge($taskNodeA, $taskNodeB);
+        $startNode = new Tasked_Model_TaskNode();
+        $finishNode = new Tasked_Model_TaskNode();
+        $taskEdgeRelation = new Tasked_Model_TaskEdge($startNode, $finishNode);
         $this->assertSame(
-            $taskNodeB,
-            $taskEdgeRelation->getTaskNodeB()
+            $finishNode,
+            $taskEdgeRelation->getFinishNode()
         );
     }
 }
