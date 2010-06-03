@@ -9,7 +9,7 @@
  */
 
 /**
- * Task Node Relation Test
+ * Task Edge Test
  *
  * @group       Tasked
  * @group       Model
@@ -19,7 +19,7 @@
  * @copyright   Copyright (c) 2005-2010 Found Line, Inc. (http://www.foundline.com/)
  * @license     http://foundline.com/legal/software-license/ New BSD License
  */
-class Tasked_Model_TaskNodeRelationTest extends PHPUnit_Framework_TestCase
+class Tasked_Model_TaskEdgeTest extends PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
@@ -36,10 +36,10 @@ class Tasked_Model_TaskNodeRelationTest extends PHPUnit_Framework_TestCase
     {
         $taskNodeA = new Tasked_Model_TaskNode();
         $taskNodeB = new Tasked_Model_TaskNode();
-        $taskNodeRelation = new Tasked_Model_TaskNodeRelation($taskNodeA, $taskNodeB);
+        $taskEdge = new Tasked_Model_TaskEdge($taskNodeA, $taskNodeB);
         $this->assertSame(
             $taskNodeA,
-            $taskNodeRelation->getTaskNodeA()
+            $taskEdge->getTaskNodeA()
         );
     }
 
@@ -47,10 +47,10 @@ class Tasked_Model_TaskNodeRelationTest extends PHPUnit_Framework_TestCase
     {
         $taskNodeA = new Tasked_Model_TaskNode();
         $taskNodeB = new Tasked_Model_TaskNode();
-        $taskNodeRelation = new Tasked_Model_TaskNodeRelation($taskNodeA, $taskNodeB);
+        $taskEdgeRelation = new Tasked_Model_TaskEdge($taskNodeA, $taskNodeB);
         $this->assertSame(
             $taskNodeB,
-            $taskNodeRelation->getTaskNodeB()
+            $taskEdgeRelation->getTaskNodeB()
         );
     }
 }

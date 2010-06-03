@@ -9,14 +9,14 @@
  */
 
 /**
- * Task Node Relation
+ * Task Edge
  *
  * @category    Tasked
  * @package     Tasked_Model
  * @copyright   Copyright (c) 2005-2010 Found Line, Inc. (http://www.foundline.com/)
  * @license     http://foundline.com/legal/software-license/ New BSD License
  */
-class Tasked_Model_TaskNodeRelation
+class Tasked_Model_TaskEdge
 {
     /**
      * @var Tasked_Model_TaskNode
