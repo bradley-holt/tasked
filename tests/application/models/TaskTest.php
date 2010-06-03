@@ -126,87 +126,51 @@ class Tasked_Model_TaskTest extends PHPUnit_Framework_TestCase
         );
     }
 
-    public function testSetAndGetTargetStartNode()
+    public function testSetAndGetTargetEdge()
     {
-        $value = new Tasked_Model_TaskNode(new Zend_Date());
+        $startNode = new Tasked_Model_TaskNode(new Zend_Date());
+        $finishNode = new Tasked_Model_TaskNode(new Zend_Date());
+        $value = new Tasked_Model_TaskEdge($startNode, $finishNode);
         $task = new Tasked_Model_Task();
         $this->assertSame(
             $task,
-            $task->setTargetStartNode($value)
+            $task->setTargetEdge($value)
         );
         $this->assertSame(
             $value,
-            $task->getTargetStartNode()
+            $task->getTargetEdge()
         );
     }
 
-    public function testSetAndGetTargetFinishNode()
+    public function testSetAndGetScheduledEdge()
     {
-        $value = new Tasked_Model_TaskNode(new Zend_Date());
+        $startNode = new Tasked_Model_TaskNode(new Zend_Date());
+        $finishNode = new Tasked_Model_TaskNode(new Zend_Date());
+        $value = new Tasked_Model_TaskEdge($startNode, $finishNode);
         $task = new Tasked_Model_Task();
         $this->assertSame(
             $task,
-            $task->setTargetFinishNode($value)
+            $task->setScheduledEdge($value)
         );
         $this->assertSame(
             $value,
-            $task->getTargetFinishNode()
+            $task->getScheduledEdge()
         );
     }
 
-    public function testSetAndGetScheduledStartNode()
+    public function testSetAndGetActualEdge()
     {
-        $value = new Tasked_Model_TaskNode(new Zend_Date());
+        $startNode = new Tasked_Model_TaskNode(new Zend_Date());
+        $finishNode = new Tasked_Model_TaskNode(new Zend_Date());
+        $value = new Tasked_Model_TaskEdge($startNode, $finishNode);
         $task = new Tasked_Model_Task();
         $this->assertSame(
             $task,
-            $task->setScheduledStartNode($value)
+            $task->setActualEdge($value)
         );
         $this->assertSame(
             $value,
-            $task->getScheduledStartNode()
-        );
-    }
-
-    public function testSetAndGetScheduledFinishNode()
-    {
-        $value = new Tasked_Model_TaskNode(new Zend_Date());
-        $task = new Tasked_Model_Task();
-        $this->assertSame(
-            $task,
-            $task->setScheduledFinishNode($value)
-        );
-        $this->assertSame(
-            $value,
-            $task->getScheduledFinishNode()
-        );
-    }
-
-    public function testSetAndGetActualStartNode()
-    {
-        $value = new Tasked_Model_TaskNode(new Zend_Date());
-        $task = new Tasked_Model_Task();
-        $this->assertSame(
-            $task,
-            $task->setActualStartNode($value)
-        );
-        $this->assertSame(
-            $value,
-            $task->getActualStartNode()
-        );
-    }
-
-    public function testSetAndGetActualFinishNode()
-    {
-        $value = new Tasked_Model_TaskNode(new Zend_Date());
-        $task = new Tasked_Model_Task();
-        $this->assertSame(
-            $task,
-            $task->setActualFinishNode($value)
-        );
-        $this->assertSame(
-            $value,
-            $task->getActualFinishNode()
+            $task->getActualEdge()
         );
     }
 }

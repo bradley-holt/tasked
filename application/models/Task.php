@@ -44,34 +44,19 @@ class Tasked_Model_Task
     private $_resource;
 
     /**
-     * @var Tasked_Model_TaskNode
+     * @var Tasked_Model_TaskEdge
      */
-    private $_targetStartNode;
+    private $_targetEdge;
 
     /**
-     * @var Tasked_Model_TaskNode
+     * @var Tasked_Model_TaskEdge
      */
-    private $_targetFinishNode;
+    private $_scheduledEdge;
 
     /**
-     * @var Tasked_Model_TaskNode
+     * @var Tasked_Model_TaskEdge
      */
-    private $_scheduledStartNode;
-
-    /**
-     * @var Tasked_Model_TaskNode
-     */
-    private $_scheduledFinishNode;
-
-    /**
-     * @var Tasked_Model_TaskNode
-     */
-    private $_actualStartNode;
-
-    /**
-     * @var Tasked_Model_TaskNode
-     */
-    private $_actualFinishNode;
+    private $_actualEdge;
 
     /**
      * Get UUID
@@ -196,134 +181,68 @@ class Tasked_Model_Task
     }
 
     /**
-     * Get Target Start Node
+     * Get Target Edge
      *
-     * @return Tasked_Model_TaskNode
+     * @return Tasked_Model_TaskEdge
      */
-    public function getTargetStartNode()
+    public function getTargetEdge()
     {
-        return $this->_targetStartNode;
+        return $this->_targetEdge;
     }
 
     /**
-     * Set Target Start Node
+     * Set Target Edge
      *
-     * @param Tasked_Model_TaskNode $value
+     * @param Tasked_Model_TaskEdge $value
      * @return Tasker_Model_Task   Provide a fluent interface
      */
-    public function setTargetStartNode(Tasked_Model_TaskNode $value = null)
+    public function setTargetEdge(Tasked_Model_TaskEdge $value = null)
     {
-        $this->_targetStartNode = $value;
+        $this->_targetEdge = $value;
         return $this;
     }
 
     /**
-     * Get Target Finish Node
+     * Get Scheduled Edge
      *
-     * @return Tasked_Model_TaskNode
+     * @return Tasked_Model_TaskEdge
      */
-    public function getTargetFinishNode()
+    public function getScheduledEdge()
     {
-        return $this->_targetFinishNode;
+        return $this->_scheduledEdge;
     }
 
     /**
-     * Set Target Finish Node
+     * Set Scheduled Edge
      *
-     * @param Tasked_Model_TaskNode $value
+     * @param Tasked_Model_TaskEdge $value
      * @return Tasker_Model_Task   Provide a fluent interface
      */
-    public function setTargetFinishNode(Tasked_Model_TaskNode $value = null)
+    public function setScheduledEdge(Tasked_Model_TaskEdge $value = null)
     {
-        $this->_targetFinishNode = $value;
+        $this->_scheduledEdge = $value;
         return $this;
     }
 
     /**
-     * Get Scheduled Start Node
+     * Get Actual Edge
      *
-     * @return Tasked_Model_TaskNode
+     * @return Tasked_Model_TaskEdge
      */
-    public function getScheduledStartNode()
+    public function getActualEdge()
     {
-        return $this->_scheduledStartNode;
+        return $this->_actualEdge;
     }
 
     /**
-     * Set Scheduled Start Node
+     * Set Actual Edge
      *
-     * @param Tasked_Model_TaskNode $value
+     * @param Tasked_Model_TaskEdge $value
      * @return Tasker_Model_Task   Provide a fluent interface
      */
-    public function setScheduledStartNode(Tasked_Model_TaskNode $value = null)
+    public function setActualEdge(Tasked_Model_TaskEdge $value = null)
     {
-        $this->_scheduledStartNode = $value;
-        return $this;
-    }
-
-    /**
-     * Get Scheduled Finish Node
-     *
-     * @return Tasked_Model_TaskNode
-     */
-    public function getScheduledFinishNode()
-    {
-        return $this->_scheduledFinishNode;
-    }
-
-    /**
-     * Set Scheduled Finish Node
-     *
-     * @param Tasked_Model_TaskNode $value
-     * @return Tasker_Model_Task   Provide a fluent interface
-     */
-    public function setScheduledFinishNode(Tasked_Model_TaskNode $value = null)
-    {
-        $this->_scheduledFinishNode = $value;
-        return $this;
-    }
-
-    /**
-     * Get Actual Start Node
-     *
-     * @return Tasked_Model_TaskNode
-     */
-    public function getActualStartNode()
-    {
-        return $this->_actualStartNode;
-    }
-
-    /**
-     * Set Actual Start Node
-     *
-     * @param Tasked_Model_TaskNode $value
-     * @return Tasker_Model_Task   Provide a fluent interface
-     */
-    public function setActualStartNode(Tasked_Model_TaskNode $value = null)
-    {
-        $this->_actualStartNode = $value;
-        return $this;
-    }
-
-    /**
-     * Get Actual Finish Node
-     *
-     * @return Tasked_Model_TaskNode
-     */
-    public function getActualFinishNode()
-    {
-        return $this->_actualFinishNode;
-    }
-
-    /**
-     * Set Actual Finish Node
-     *
-     * @param Tasked_Model_TaskNode $value
-     * @return Tasker_Model_Task   Provide a fluent interface
-     */
-    public function setActualFinishNode(Tasked_Model_TaskNode $value = null)
-    {
-        $this->_actualFinishNode = $value;
+        $this->_actualEdge = $value;
         return $this;
     }
 }
