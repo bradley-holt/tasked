@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="tasked" basedir="." default="build">
+    <property name="builddir" value="./build" />
+
+    <target name="build">
+        <phingcall target="clean" />
+        <phingcall target="prepare" />
+        <phingcall target="phpdoc" />
+        <phingcall target="phpcpd" />
+        <phingcall target="pdepend" />
+        <phingcall target="phpcs" />
+        <phingcall target="phpmd" />
+        <phingcall target="phpunit" />
+    </target>
+
+    <target name="clean">
+        <echo msg="Clean..." />
+        <delete dir="${builddir}" />
+    </target>
+
+    <target name="prepare">
+        <echo msg="Prepare..." />
+        <mkdir dir="${builddir}" />
+        <mkdir dir="${builddir}/logs" />
+        <mkdir dir="${builddir}/logs/coverage" />
+        <mkdir dir="${builddir}/docs" />
+    </target>
+
+    <!-- phpDocumentor -->
+    <target name="phpdoc">
+        <echo msg="PHP Documentor..." />
+        <phpdoc title="API Documentation"
+            destdir="${builddir}/docs"
+            sourcecode="yes"
+            quiet="on"
+            defaultpackagename="Tasked"
+            output="HTML:Smarty:PHP">
+            <fileset dir="./application">
+                <include name="**/*.php" />
+            </fileset>
+        </phpdoc>
+    </target>
+
+    <!-- Copy/Paste Detector (CPD) for PHP -->
+    <target name="phpcpd">
+        <echo msg="PHP Copy/Paste..." />
+        <exec command="phpcpd --log-pmd ${builddir}/logs/phpcpd.xml ./application" escape="false" logoutput="true" />
+    </target>
+
+    <!-- PHP Depend -->
+    <target name="pdepend">
+        <echo msg="PHP Depend..." />
+        <exec command="pdepend --jdepend-chart=${builddir}/logs/jdepend.svg --jdepend-xml=${builddir}/logs/jdepend.xml --overview-pyramid=${builddir}/logs/jdepend-pyramid.svg ./application" escape="false" logoutput="true" />
+    </target>
+
+    <!-- PHP_CodeSniffer -->
+    <target name="phpcs">
+        <echo msg="PHP CodeSniffer..." />
+        <exec command="phpcs --standard=ZEND --report=checkstyle ./application > ${builddir}/logs/checkstyle.xml" escape="false" logoutput="true" />
+    </target>
+
+    <!-- PHP Mess Detector -->
+    <target name="phpmd">
+        <exec command="phpmd ./application xml codesize > ${builddir}/logs/phpmd.xml" logoutput="true" />
+    </target>
+
+    <!-- PHPUnit -->
+    <target name="phpunit">
+        <echo msg="PHP Unit..." />
+        <exec dir="./tests" command="phpunit" logoutput="true" />
+    </target>
+
+</project>
