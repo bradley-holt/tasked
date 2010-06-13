@@ -32,8 +32,7 @@ class Tasked_Plugin_AppWorkspace extends Zend_Controller_Plugin_Abstract
         $taskCollection = new Tasked_Model_AppCollection();
         $taskCollection
             ->setControllerName('task')
-            ->setAtomTitle('Tasks')
-        ;
+            ->setAtomTitle('Tasks');
         $appWorkspace
             ->setModuleName('default')
             ->setAtomTitle('Default')
@@ -41,8 +40,7 @@ class Tasked_Plugin_AppWorkspace extends Zend_Controller_Plugin_Abstract
                 array (
                     $taskCollection,
                 )
-            )
-        ;
+            );
         $appService
             ->setAppWorkspaces(
                 array_merge(
@@ -51,7 +49,6 @@ class Tasked_Plugin_AppWorkspace extends Zend_Controller_Plugin_Abstract
                         $appWorkspace,
                     )
                 )
-            )
-        ;
+            );
     }
 }

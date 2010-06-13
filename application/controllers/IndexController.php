@@ -34,8 +34,7 @@ class IndexController extends Zend_Rest_Controller
     public function indexAction()
     {
         $this->getResponse()
-            ->setHeader('Content-Type', 'application/atomsvc+xml')
-        ;
+            ->setHeader('Content-Type', 'application/atomsvc+xml');
         /* @var $appService Tasked_Model_AppService */
         $appService = $this->_getParam('appService');
         $this->view->appService = $appService;
