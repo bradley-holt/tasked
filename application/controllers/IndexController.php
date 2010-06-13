@@ -47,7 +47,7 @@ class IndexController extends Zend_Rest_Controller
      */
     public function getAction()
     {
-        $this->_forward('error404', 'error');
+        $this->_forward('error404', 'client-error');
     }
 
     /**
@@ -58,7 +58,7 @@ class IndexController extends Zend_Rest_Controller
     public function postAction()
     {
         $this->_setParam('allow', 'GET');
-        $this->_forward('error405', 'error');
+        $this->_forward('error405', 'client-error');
     }
 
     /**
@@ -68,7 +68,7 @@ class IndexController extends Zend_Rest_Controller
      */
     public function putAction()
     {
-        $this->_forward('error404', 'error');
+        $this->_forward('error404', 'client-error');
     }
 
     /**
@@ -78,6 +78,6 @@ class IndexController extends Zend_Rest_Controller
      */
     public function deleteAction()
     {
-        $this->_forward('error404', 'error');
+        $this->_forward('error404', 'client-error');
     }
 }
