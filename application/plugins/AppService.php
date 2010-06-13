@@ -4,7 +4,7 @@
  *
  * @category    Tasked
  * @package     Tasked_Plugin
- * @copyright   Copyright (c) 2005-2010 Found Line, Inc. (http://www.foundline.com/)
+ * @copyright   Copyright (c) 2005-2010 Found Line, Inc. (http://foundline.com/)
  * @license     http://foundline.com/legal/software-license/ New BSD License
  * @version     $Id: AppService.php 43 2010-05-16 20:41:56Z bradley.holt $
  */
@@ -15,7 +15,7 @@
  * @category    Tasked
  * @package     Tasked_Plugin
  * @license     http://foundline.com/legal/software-license/ New BSD License
- * @copyright   Copyright (c) 2005-2010 Found Line, Inc. (http://www.foundline.com/)
+ * @copyright   Copyright (c) 2005-2010 Found Line, Inc. (http://foundline.com/)
  */
 class Tasked_Plugin_AppService extends Zend_Controller_Plugin_Abstract
 {

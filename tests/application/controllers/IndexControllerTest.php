@@ -3,7 +3,7 @@
  * Tasked
  *
  * @category    Tasked
- * @copyright   Copyright (c) 2005-2010 Found Line, Inc. (http://www.foundline.com/)
+ * @copyright   Copyright (c) 2005-2010 Found Line, Inc. (http://foundline.com/)
  * @license     http://foundline.com/legal/software-license/ New BSD License
  */
 
@@ -12,7 +12,7 @@
  *
  * @group       Controller
  * @category    Tasked
- * @copyright   Copyright (c) 2005-2010 Found Line, Inc. (http://www.foundline.com/)
+ * @copyright   Copyright (c) 2005-2010 Found Line, Inc. (http://foundline.com/)
  * @license     http://foundline.com/legal/software-license/ New BSD License
  */
 class IndexControllerTest extends Zend_Test_PHPUnit_ControllerTestCase

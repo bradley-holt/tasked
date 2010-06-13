@@ -3,7 +3,7 @@
  * Tasked
  *
  * @category    Tasked
- * @copyright   Copyright (c) 2005-2010 Found Line, Inc. (http://www.foundline.com/)
+ * @copyright   Copyright (c) 2005-2010 Found Line, Inc. (http://foundline.com/)
  * @license     http://foundline.com/legal/software-license/ New BSD License
  */
 
@@ -11,7 +11,7 @@
  * Bootstrap
  *
  * @category    Tasked
- * @copyright   Copyright (c) 2005-2010 Found Line, Inc. (http://www.foundline.com/)
+ * @copyright   Copyright (c) 2005-2010 Found Line, Inc. (http://foundline.com/)
  * @license     http://foundline.com/legal/software-license/ New BSD License
  */
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
