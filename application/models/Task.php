@@ -16,28 +16,8 @@
  * @copyright   Copyright (c) 2005-2010 Found Line, Inc. (http://www.foundline.com/)
  * @license     http://foundline.com/legal/software-license/ New BSD License
  */
-class Tasked_Model_Task
+class Tasked_Model_Task extends Tasked_Model_AtomEntry
 {
-    /**
-     * @var string
-     */
-    private $_uuid;
-
-    /**
-     * @var string
-     */
-    private $_title;
-
-    /**
-     * @var Zend_Date
-     */
-    private $_updated;
-
-    /**
-     * @var Zend_Date
-     */
-    private $_published;
-
     /**
      * @var Tasked_Model_Resource
      */
@@ -59,16 +39,6 @@ class Tasked_Model_Task
     private $_actualEdge;
 
     /**
-     * Get UUID
-     *
-     * @return string
-     */
-    public function getUuid()
-    {
-        return $this->_uuid;
-    }
-
-    /**
      * Set UUID
      *
      * @param string $value
@@ -76,21 +46,7 @@ class Tasked_Model_Task
      */
     public function setUuid($value)
     {
-        if (null !== $value) {
-            $value = (string)$value;
-        }
-        $this->_uuid = $value;
-        return $this;
-    }
-
-    /**
-     * Get Title
-     *
-     * @return string
-     */
-    public function getTitle()
-    {
-        return $this->_title;
+        return parent::setUuid($value);
     }
 
     /**
@@ -101,24 +57,7 @@ class Tasked_Model_Task
      */
     public function setTitle($value)
     {
-        if (null !== $value) {
-            $value = (string)$value;
-        }
-        $this->_title = $value;
-        return $this;
-    }
-
-    /**
-     * Get Updated
-     *
-     * @return Zend_Date
-     */
-    public function getUpdated()
-    {
-        if (null === $this->_updated) {
-            return null;
-        }
-        return clone $this->_updated;
+        return parent::setTitle($value);
     }
 
     /**
@@ -129,21 +68,7 @@ class Tasked_Model_Task
      */
     public function setUpdated(Zend_Date $value = null)
     {
-        $this->_updated = $value;
-        return $this;
-    }
-
-    /**
-     * Get Published
-     *
-     * @return Zend_Date
-     */
-    public function getPublished()
-    {
-        if (null === $this->_published) {
-            return null;
-        }
-        return clone $this->_published;
+        return parent::setUpdated($value);
     }
 
     /**
@@ -154,8 +79,7 @@ class Tasked_Model_Task
      */
     public function setPublished(Zend_Date $value = null)
     {
-        $this->_published = $value;
-        return $this;
+        return parent::setPublished($value);
     }
 
     /**
