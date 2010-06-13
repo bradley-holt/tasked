@@ -11,6 +11,9 @@
 /**
  * Resource
  *
+ * An entity that helps complete a task and is identified by its Universally
+ * Unique Identifier (UUID).
+ *
  * @category    Tasked
  * @package     Tasked_Model
  * @copyright   Copyright (c) 2005-2010 Found Line, Inc. (http://foundline.com/)

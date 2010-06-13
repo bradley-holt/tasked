@@ -11,6 +11,8 @@
 /**
  * Atom Entry
  *
+ * An entity identified by its Universally Unique Identifier (UUID).
+ *
  * @category    Tasked
  * @package     Tasked_Model
  * @copyright   Copyright (c) 2005-2010 Found Line, Inc. (http://foundline.com/)
@@ -41,6 +43,8 @@ abstract class Tasked_Model_AtomEntry
     /**
      * Get UUID
      *
+     * Return the entity's Universally Unique Identifier (UUID).
+     *
      * @return string
      */
     public function getUuid()
@@ -50,6 +54,9 @@ abstract class Tasked_Model_AtomEntry
 
     /**
      * Set UUID
+     *
+     * Set the entity's Universally Unique Identifier (UUID) to the specified
+     * value. Return the entity in order to provide a fluent interface.
      *
      * @param string $value
      * @return Tasked_Model_AtomEntry   Provide a fluent interface
@@ -66,6 +73,8 @@ abstract class Tasked_Model_AtomEntry
     /**
      * Get Title
      *
+     * Return the entity's title.
+     *
      * @return string
      */
     public function getTitle()
@@ -75,6 +84,9 @@ abstract class Tasked_Model_AtomEntry
 
     /**
      * Set Title
+     *
+     * Set the entity's title to the specified value. Return the entity in order
+     * to provide a fluent interface.
      *
      * @param string $value
      * @return Tasked_Model_AtomEntry   Provide a fluent interface
@@ -91,6 +103,8 @@ abstract class Tasked_Model_AtomEntry
     /**
      * Get Updated
      *
+     * Return the date and time at which the entity was last updated.
+     *
      * @return Zend_Date
      */
     public function getUpdated()
@@ -104,6 +118,9 @@ abstract class Tasked_Model_AtomEntry
     /**
      * Set Updated
      *
+     * Set the date and time at which the entity was last updated. Return the
+     * entity in order to provide a fluent interface.
+     *
      * @param Zend_Date $value
      * @return Tasked_Model_AtomEntry   Provide a fluent interface
      */
@@ -115,6 +132,8 @@ abstract class Tasked_Model_AtomEntry
 
     /**
      * Get Published
+     *
+     * Return the date and time at which the entity was published.
      *
      * @return Zend_Date
      */
@@ -128,6 +147,9 @@ abstract class Tasked_Model_AtomEntry
 
     /**
      * Set Published
+     *
+     * Set the date and time at which the entity was published. Return the
+     * entity in order to provide a fluent interface.
      *
      * @param Zend_Date $value
      * @return Tasked_Model_AtomEntry   Provide a fluent interface
